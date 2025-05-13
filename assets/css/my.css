@@ -1,6 +1,7 @@
 .header-logo a img {
   height: 70px;
 }
+
 .header-layout-default .logo-bg-half {
   background: none;
 }
@@ -10,11 +11,11 @@
   background: linear-gradient(to right, #eb130a, #c22b25e0);
 }
 
-.main-menu > ul > li {
+.main-menu>ul>li {
   margin: 0 10px;
 }
 
-.header-layout-default .main-menu > ul > li > a {
+.header-layout-default .main-menu>ul>li>a {
   padding: 9.5px 0;
 }
 
@@ -60,7 +61,7 @@
   color: #ffffff;
 }
 
-.header-links li > i {
+.header-links li>i {
   margin-right: 10px;
   padding: 6px 6px;
   border: 1px solid #ffffff;
@@ -115,14 +116,7 @@
   border-radius: 0px;
 }
 
-.th-header
-  .sticky-wrapper
-  .menu-area
-  .main-menu
-  .menu-item-has-children
-  ul
-  li
-  a:before {
+.th-header .sticky-wrapper .menu-area .main-menu .menu-item-has-children ul li a:before {
   content: "\f105";
   font-family: var(--icon-font);
   position: absolute;
@@ -359,7 +353,7 @@
 }
 
 .box-title {
-  font-size: 30px;
+  font-size: 18px;
   line-height: 2.2;
   background: #ffffff;
   color: rgb(0, 0, 0);
@@ -370,19 +364,21 @@
   border-radius: 5px;
 }
 
+.testi-box img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .blog-single.style5 .blog-img:after {
-  background: -webkit-linear-gradient(
-    top,
-    rgba(0, 17, 43, 0) 0%,
-    rgba(0, 17, 43, 0.73) 54.17%,
-    #00112b 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(0, 17, 43, 0) 0%,
-    rgba(0, 17, 43, 0.73) 54.17%,
-    #00112b 100%
-  );
+  background: -webkit-linear-gradient(top,
+      rgba(0, 17, 43, 0) 0%,
+      rgba(0, 17, 43, 0.73) 54.17%,
+      #00112b 100%);
+  background: linear-gradient(180deg,
+      rgba(0, 17, 43, 0) 0%,
+      rgba(0, 17, 43, 0.73) 54.17%,
+      #00112b 100%);
 }
 
 .video-box .overlay {
@@ -551,6 +547,7 @@
   background-color: #e31e25;
   color: #fff;
 }
+
 .th-menu-toggle {
   width: 45px;
   height: 40px;
@@ -558,13 +555,16 @@
   background-color: #e71a11;
   border-radius: 5px;
 }
+
 .th-menu-wrapper .mobile-logo {
   padding-bottom: 10px;
   padding-top: 10px;
 }
+
 .th-mobile-menu {
   margin-top: 0px;
 }
+
 /* Bottom nav visible only on mobile */
 .mobile-bottom-nav {
   position: fixed;
@@ -594,9 +594,10 @@
   margin-bottom: 4px;
   color: #d32f2f;
 }
+
 .whatsapp-float {
   position: fixed;
-  bottom: 75px;
+  bottom: 110px;
   right: 10px;
   z-index: 99999;
   cursor: pointer;
@@ -604,29 +605,95 @@
 }
 
 .whatsapp-float img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
+}
+
+.course-box .course-img img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.phone-link {
+  flex: 1;
+  text-decoration: none;
+  color: #de2926;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f9f9f9;
+  height: 100%;
+}
+
+.phone-link i {
+  font-size: 1.2rem;
+}
+
+.demo-btn {
+  flex: 1;
+  height: 100%;
+  background-color: #de2926;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.res-d-none {
+  display: none;
+}
+
+.scroll-top {
+  right: 10px;
+  bottom: 50px;
 }
 
 @keyframes float-bounce {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
+
 @media (max-width: 1600px) {
   .header-layout-default .header-top {
     padding: 15px;
   }
 }
+
 /* Media query for mobile devices (max-width: 768px) */
 @media only screen and (max-width: 768px) {
   .header-logo a img {
     height: 60px;
   }
+
   .th-hero-slide .desk-banner {
     display: none;
   }
@@ -636,18 +703,39 @@
   }
 
   .th-hero-slide img {
-    height: 95vh;
+    height: 85vh;
     width: 100%;
     object-fit: cover;
+    object-position: top;
   }
+
   .mobile-bottom-nav {
     display: flex;
   }
+
   .whatsapp-float img {
     width: 50px;
     height: 50px;
   }
+
   .mobile-logo a img {
     height: 70px;
+  }
+
+  .phone-link,
+  .demo-btn {
+    font-size: 0.9rem;
+  }
+
+  .res-fs-15 {
+    font-size: 15px !important;
+  }
+
+  .res-d-none {
+    display: block;
+  }
+
+  .footer-layout6 .copyright-wrap {
+    margin-bottom: 45px;
   }
 }
