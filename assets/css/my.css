@@ -339,6 +339,7 @@
 .admission-card_img img {
   width: 100%;
   height: 400px;
+  object-fit: cover;
 }
 
 .admission-card {
@@ -670,6 +671,22 @@
   bottom: 50px;
 }
 
+.course-form ::placeholder {
+  color: black !important;
+  opacity: 1;
+  /* Firefox ke liye */
+}
+
+.course-form input,
+.course-form select {
+  color: black !important;
+}
+
+/* Select dropdown option text color */
+.course-form select option {
+  color: black !important;
+}
+
 @keyframes float-bounce {
 
   0%,
@@ -690,6 +707,24 @@
 
 /* Media query for mobile devices (max-width: 768px) */
 @media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .h2,
+  h2 {
+    font-size: 25px;
+  }
+
+  .check-box .title {
+    font-size: 16px;
+  }
+
+  .course-tab-2.tab-menu1 .filter-btn {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
   .header-logo a img {
     height: 60px;
   }
@@ -707,6 +742,19 @@
     width: 100%;
     object-fit: cover;
     object-position: top;
+  }
+
+  .gallery-img img {
+    min-height: 200px !important;
+    max-height: 200px !important;
+  }
+
+  .testi-box img, .video-box img {
+    height: 200px;
+  }
+
+  .video-box {
+    min-height: 200px;
   }
 
   .mobile-bottom-nav {

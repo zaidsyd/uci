@@ -288,6 +288,135 @@
           ],
         });
     }),
+
+
+t(".th-carousell").each(function () {
+      var e = t(this);
+      function a(t) {
+        return e.data(t);
+      }
+      var s =
+        '<button type="button" class="slick-prev"><i class="' +
+        a("prev-arrow") +
+        '"></i></button>',
+        i =
+          '<button type="button" class="slick-next"><i class="' +
+          a("next-arrow") +
+          '"></i></button>';
+      t("[data-slick-next]").each(function () {
+        t(this).on("click", function (e) {
+          e.preventDefault(), t(t(this).data("slick-next")).slick("slickNext");
+        });
+      }),
+        t("[data-slick-prev]").each(function () {
+          t(this).on("click", function (e) {
+            e.preventDefault(),
+              t(t(this).data("slick-prev")).slick("slickPrev");
+          });
+        }),
+        1 == a("arrows") &&
+        (e.closest(".arrow-wrap").length ||
+          e.closest(".container").parent().addClass("arrow-wrap")),
+        e.slick({
+          dots: !!a("dots"),
+          fade: !!a("fade"),
+          arrows: !!a("arrows"),
+          speed: a("speed") ? a("speed") : 1e3,
+          asNavFor: !!a("asnavfor") && a("asnavfor"),
+          autoplay: 0 != a("autoplay"),
+          infinite: 0 != a("infinite"),
+          slidesToShow: a("slide-show") ? a("slide-show") : 1,
+          adaptiveHeight: !!a("adaptive-height"),
+          centerMode: !!a("center-mode"),
+          autoplaySpeed: a("autoplay-speed") ? a("autoplay-speed") : 8e3,
+          centerPadding: a("center-padding") ? a("center-padding") : "0",
+          focusOnSelect: 0 != a("focuson-select"),
+          pauseOnFocus: !!a("pauseon-focus"),
+          pauseOnHover: !!a("pauseon-hover"),
+          variableWidth: !!a("variable-width"),
+          vertical: !!a("vertical"),
+          verticalSwiping: !!a("vertical"),
+          swipeToSlide: !!a("swipetoslide"),
+          prevArrow: a("prev-arrow")
+            ? s
+            : '<button type="button" class="slick-prev"><i class="far fa-arrow-left"></i></button>',
+          nextArrow: a("next-arrow")
+            ? i
+            : '<button type="button" class="slick-next"><i class="far fa-arrow-right"></i></button>',
+          rtl: "rtl" == t("html").attr("dir"),
+          responsive: [
+            {
+              breakpoint: 1600,
+              settings: {
+                arrows: !!a("xl-arrows"),
+                dots: !!a("xl-dots"),
+                slidesToShow: a("xl-slide-show")
+                  ? a("xl-slide-show")
+                  : a("slide-show"),
+                centerMode: !!a("xl-center-mode"),
+                centerPadding: "0",
+              },
+            },
+            {
+              breakpoint: 1400,
+              settings: {
+                arrows: !!a("ml-arrows"),
+                dots: !!a("ml-dots"),
+                slidesToShow: a("ml-slide-show")
+                  ? a("ml-slide-show")
+                  : a("slide-show"),
+                centerMode: !!a("ml-center-mode"),
+                centerPadding: 0,
+              },
+            },
+            {
+              breakpoint: 1200,
+              settings: {
+                arrows: !!a("lg-arrows"),
+                dots: !!a("lg-dots"),
+                slidesToShow: a("lg-slide-show")
+                  ? a("lg-slide-show")
+                  : a("slide-show"),
+                centerMode: !!a("lg-center-mode") && a("lg-center-mode"),
+                centerPadding: 0,
+              },
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                arrows: !!a("md-arrows"),
+                dots: !!a("md-dots"),
+                slidesToShow: a("md-slide-show") ? a("md-slide-show") : 2,
+                centerMode: !!a("md-center-mode") && a("md-center-mode"),
+                centerPadding: 0,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: !!a("sm-arrows"),
+                dots: !!a("sm-dots"),
+                slidesToShow: a("sm-slide-show") ? a("sm-slide-show") : 2,
+                centerMode: !!a("sm-center-mode") && a("sm-center-mode"),
+                centerPadding: 0,
+              },
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                arrows: !!a("xs-arrows"),
+                dots: !!a("xs-dots"),
+                slidesToShow: a("xs-slide-show") ? a("xs-slide-show") : 2,
+                centerMode: !!a("xs-center-mode") && a("xs-center-mode"),
+                centerPadding: 0,
+              },
+            },
+          ],
+        });
+    }),
+
+
+
     t("[data-ani-duration]").each(function () {
       var e = t(this).data("ani-duration");
       t(this).css("animation-duration", e);
