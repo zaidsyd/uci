@@ -11,11 +11,11 @@
   background: linear-gradient(to right, #eb130a, #c22b25e0);
 }
 
-.main-menu>ul>li {
+.main-menu > ul > li {
   margin: 0 10px;
 }
 
-.header-layout-default .main-menu>ul>li>a {
+.header-layout-default .main-menu > ul > li > a {
   padding: 9.5px 0;
 }
 
@@ -61,7 +61,7 @@
   color: #ffffff;
 }
 
-.header-links li>i {
+.header-links li > i {
   margin-right: 10px;
   padding: 6px 6px;
   border: 1px solid #ffffff;
@@ -116,7 +116,14 @@
   border-radius: 0px;
 }
 
-.th-header .sticky-wrapper .menu-area .main-menu .menu-item-has-children ul li a:before {
+.th-header
+  .sticky-wrapper
+  .menu-area
+  .main-menu
+  .menu-item-has-children
+  ul
+  li
+  a:before {
   content: "\f105";
   font-family: var(--icon-font);
   position: absolute;
@@ -372,14 +379,18 @@
 }
 
 .blog-single.style5 .blog-img:after {
-  background: -webkit-linear-gradient(top,
-      rgba(0, 17, 43, 0) 0%,
-      rgba(0, 17, 43, 0.73) 54.17%,
-      #00112b 100%);
-  background: linear-gradient(180deg,
-      rgba(0, 17, 43, 0) 0%,
-      rgba(0, 17, 43, 0.73) 54.17%,
-      #00112b 100%);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 17, 43, 0) 0%,
+    rgba(0, 17, 43, 0.73) 54.17%,
+    #00112b 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(0, 17, 43, 0) 0%,
+    rgba(0, 17, 43, 0.73) 54.17%,
+    #00112b 100%
+  );
 }
 
 .video-box .overlay {
@@ -686,9 +697,13 @@
 .course-form select option {
   color: black !important;
 }
-
+.about-grid {
+    padding: 35px 10px 35px;
+}
+.check-box {
+    background-color: #ecececb5;
+}
 @keyframes float-bounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -724,7 +739,9 @@
     font-size: 14px;
     font-weight: 600;
   }
-
+    .about-grid {
+        padding: 15px 10px 25px;
+    }
   .header-logo a img {
     height: 60px;
   }
@@ -749,7 +766,8 @@
     max-height: 200px !important;
   }
 
-  .testi-box img, .video-box img {
+  .testi-box img,
+  .video-box img {
     height: 200px;
   }
 
@@ -785,5 +803,14 @@
 
   .footer-layout6 .copyright-wrap {
     margin-bottom: 45px;
+  }
+}
+@media (max-width:375px){
+  .masonary-active{
+    height:100% !important
+  }
+  .masonary-active .filter-item {
+    position: relative !important;
+    top:0px !important
   }
 }
